@@ -21,14 +21,14 @@ class StudentController extends Controller
     {
       //check validation
       $this->validate($request,[
-        'name'            => 'required|max:20',
+        'name'            => 'required|string|max:20',
         'registration_id' => 'required|integer',
-        'dept'            => 'required|max:15',
+        'dept'            => 'required|string|max:15',
         'info'            => 'nullable',
       ]);
       $student = new Student;
       $student->name = $request->name;
-      $student->registration_id = $request->reg;
+      $student->registration_id = $request->registration_id;
       $student->dept = $request->dept;
       $student->info = $request->info;
       $student->save();

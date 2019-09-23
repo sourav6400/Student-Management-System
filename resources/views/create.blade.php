@@ -28,19 +28,19 @@
       <div class="form-group">
         <label class="control-label col-sm-2" for="name">Student Name:</label>
         <div class="col-sm-10">
-          <input type="text" class="form-control" id="name" name="name" placeholder="Enter Name" max= "10" required>
+          <input type="text" class="form-control" id="name" name="name" placeholder="Enter Name" maxlength="20" required>
         </div>
       </div>
       <div class="form-group">
         <label class="control-label col-sm-2" for="name">Registration No:</label>
         <div class="col-sm-10">
-          <input type="text" class="form-control" id="reg" name="reg" placeholder="Enter Registration No" required>
+          <input type="number" class="form-control" id="registration_id" name="registration_id" placeholder="Enter Registration No" required>
         </div>
       </div>
       <div class="form-group">
         <label class="control-label col-sm-2" for="name">Department:</label>
         <div class="col-sm-10">
-          <input type="text" class="form-control" id="dept" name="dept" placeholder="Enter Department Name" required>
+          <input type="text" class="form-control" id="dept" name="dept" placeholder="Enter Department Name" maxlength="15" required>
         </div>
       </div>
       <div class="form-group">
