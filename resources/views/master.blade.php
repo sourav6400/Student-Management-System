@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>
-      @yield('title','Student Management');
+      @yield('title','Student Management')
     </title>
     <link rel="stylesheet" href="{{ asset('bootstrap\css\bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css\parsley.css') }}">
@@ -26,7 +26,17 @@
             <ul class="nav navbar-nav">
               <li class="active"><a href="{{ route('index') }}">Home</a></li>
               <li><a href="{{ route('create') }}">Create</a></li>
-              <li><a href="#">Contact</a></li>
+              <!-- <li><a href="#">Contact</a></li> -->
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              
+              @if(Auth::check())
+                <li class="active"><a href="{{ route('home') }}">Dashbord</a></li>
+              @else
+                <li class="active"><a href="{{ route('register') }}">Register</a></li>
+                <li><a href="{{ route('login') }}">Login</a></li>
+              @endif
+              
             </ul>
 
           </div><!--/.nav-collapse -->
@@ -35,7 +45,6 @@
       <div class="container">
         @yield('content');
       </div>
-
 
     <script type="text/javascript" src="{{ asset('bootstrap\css\bootstrap.min.css') }}"></script>
     <script type="text/javascript" src="{{ asset('js\jquery.min.js') }}"></script>
